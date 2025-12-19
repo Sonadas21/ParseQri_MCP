@@ -628,7 +628,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For issues, questions, or feature requests:
 
 - **GitHub Issues**: [Report a bug](https://github.com/Sonadas21/ParseQri_MCP/issues)
-- **Email**: sona.d@c2c-as.com
+- **Email**: dass21656@gmail.com
 - **Documentation**: Check the docs/ folder for detailed guides
 
 ---
