@@ -1,0 +1,51 @@
+# TextToSQL_Agent Folder Structure
+
+TextToSQL_Agent/
+├── __init__.py
+├── README.md
+├── config.json
+├── loan_db.db
+├── main.py
+├── requirements.txt
+├── watch_data_folder.py
+│
+├── agents/
+│   ├── __init__.py
+│   ├── __pycache__/
+│   ├── advanced_visualization.py
+│   ├── data_ingestion.py
+│   ├── data_preprocessing.py
+│   ├── intent_classification.py
+│   ├── query_cache.py
+│   ├── query_execution.py
+│   ├── response_formatting.py
+│   ├── schema_management.py
+│   ├── schema_understanding.py
+│   ├── sql_generation.py
+│   ├── sql_validation.py
+│   └── visualization.py
+│
+├── cache/
+│
+├── core/
+│   ├── __init__.py
+│   ├── __pycache__/
+│   └── orchestrator.py
+│
+├── data/
+│   ├── README.md
+│   └── loan.csv
+│
+├── models/
+│   ├── __init__.py
+│   ├── __pycache__/
+│   └── data_models.py
+│
+├── tests/
+│
+└── utils/
+    ├── __init__.py
+    ├── __pycache__/
+    ├── README_csv_retriever.md
+    ├── csv_retriever.py
+    └── data_folder_monitor.py 

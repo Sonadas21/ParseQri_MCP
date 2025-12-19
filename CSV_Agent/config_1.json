@@ -1,0 +1,119 @@
+{
+    "agents": {
+      "data_ingestion": {
+        "module": "agents.data_ingestion",
+        "class": "DataIngestionAgent",
+        "params": {}
+      },
+      "schema_understanding": {
+        "module": "agents.schema_understanding",
+        "class": "SchemaUnderstandingAgent",
+        "params": {
+          "llm_model": "mistral",
+          "api_base": "http://localhost:11434",
+          "db_url": "postgresql://postgres:password@localhost:5432/parseqri",
+          "schema": "public",
+          "chroma_persist_dir": "../data/db_storage"
+        }
+      },
+      "intent_classifier": {
+        "module": "agents.intent_classification",
+        "class": "IntentClassificationAgent",
+        "params": {
+          "llm_model": "llama3.1",
+          "api_base": "http://localhost:11434"
+        }
+      },
+      "sql_generation": {
+        "module": "agents.sql_generation",
+        "class": "SQLGenerationAgent",
+        "params": {
+          "llm_model": "qwen2.5",
+          "api_base": "http://localhost:11434"
+        }
+      },
+      "sql_validation": {
+        "module": "agents.sql_validation",
+        "class": "SQLValidationAgent",
+        "params": {
+          "llm_model": "orca2",
+          "api_base": "http://localhost:11434"
+        }
+      },
+      "query_execution": {
+        "module": "agents.query_execution",
+        "class": "QueryExecutionAgent",
+        "params": {
+          "postgres_url": "postgresql://postgres:password@localhost:5432/parseqri"
+        }
+      },
+      "response_formatting": {
+        "module": "agents.response_formatting",
+        "class": "ResponseFormattingAgent",
+        "params": {
+          "llm_model": "mistral",
+          "api_base": "http://localhost:11434"
+        }
+      },
+      "visualization": {
+        "module": "agents.visualization",
+        "class": "VisualizationAgent",
+        "params": {
+          "llm_model": "codellama:latest",
+          "api_base": "http://localhost:11434"
+        }
+      },
+      "data_preprocessing": {
+        "module": "agents.data_preprocessing",
+        "class": "DataPreprocessingAgent",
+        "params": {}
+      },
+      "query_cache": {
+        "module": "agents.query_cache",
+        "class": "QueryCacheAgent",
+        "params": {
+          "cache_dir": "cache"
+        }
+      },
+      "schema_management": {
+        "module": "agents.schema_management",
+        "class": "SchemaManagementAgent",
+        "params": {}
+      },
+      "advanced_visualization": {
+        "module": "agents.advanced_visualization",
+        "class": "AdvancedVisualizationAgent",
+        "params": {}
+      },
+      "metadata_indexer": {
+        "module": "agents.metadata_indexer",
+        "class": "MetadataIndexerAgent",
+        "params": {
+          "llm_model": "llama3.1",
+          "api_base": "http://localhost:11434",
+          "chroma_persist_dir": "../data/db_storage"
+        }
+      },
+      "postgres_handler": {
+        "module": "agents.postgres_handler",
+        "class": "PostgresHandlerAgent",
+        "params": {
+          "db_url": "postgresql://postgres:password@localhost:5432/parseqri",
+          "schema": "public"
+        }
+      },
+      "query_router": {
+        "module": "agents.query_router",
+        "class": "QueryRouterAgent",
+        "params": {}
+      }
+    },
+    "database": {
+      "default_db_name": "",
+      "default_table_name": ""
+    },
+    "logging": {
+      "level": "INFO",
+      "file": "textsql.log"
+    }
+  }

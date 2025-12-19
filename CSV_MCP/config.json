@@ -1,0 +1,24 @@
+{
+  "server": {
+    "name": "CSV MCP Server",
+    "version": "1.0.0",
+    "description": "MCP server for CSV data processing with PostgreSQL and ChromaDB"
+  },
+  "csv_agent": {
+    "config_path": "../CSV_Agent/config.json",
+    "description": "Path to CSV_Agent configuration file"
+  },
+  "database": {
+    "postgres": {
+      "url": "postgresql://postgres:password@localhost:5432/parseqri",
+      "schema": "public"
+    },
+    "chromadb": {
+      "persist_dir": "../data/db_storage"
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}
